@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Project specific outputs (Too large for Git)
+output/
+final_model/
+*.ply
+*.obj
+*.npy
+*.mtl
+
+# IDE
+.vscode/
