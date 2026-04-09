@@ -12,9 +12,23 @@ imageio
 
 # 3D Libraries
 trimesh
-open3d-cpu>=0.15.0 # Use CPU version for Hugging Face Spaces (smaller)
 scipy
 
 # Utilities
 huggingface_hub
-mnest # Sometimes needed for nested asyncio loops
+
+# ── GPU Mode (TripoSR 360°) ────────────────────────────────────────────────────
+# Install on the GPU machine ONLY:
+#
+#   1. Install CUDA-enabled PyTorch first (match your CUDA version):
+#      pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#
+#   2. Install TripoSR + background removal:
+#      pip install git+https://github.com/VAST-AI-Research/TripoSR rembg
+#
+#   3. If torchmcubes fails with a CUDA error, fix with:
+#      pip uninstall torchmcubes
+#      pip install git+https://github.com/tatsy/torchmcubes.git
+#
+# The app runs fine WITHOUT these on CPU-only machines (GPU tab will show an
+# error message instead of crashing).
